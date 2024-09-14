@@ -18,18 +18,21 @@ from django.contrib import admin
 from django.urls import include, path
 from MainPage import views as mainviews
 from signup import views as signviews
+from signup import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("/", signviews.signup),
-    path("startup/", signviews.questionaire),
+    path("signup/", signviews.signup),
     path("welcome/", mainviews.welcome),
-    path("home/", mainviews.home),
     path("portfolio/", mainviews.portfolio),
     path("buy/", mainviews.buy),
     path("reccomendations/", mainviews.reccomendations),
     path("sell/", mainviews.sell),
     path("transactions/", mainviews.transactions),
     path("profit/", mainviews.profit),
-    path("settings/", mainviews.settings)
+    path("settings/", mainviews.settings),
+    path("home/", mainviews.home),
+    path("profile/", mainviews.profile),
+    path('register/', auth_views.register),
+    path('', include('django.contrib.auth.urls'))
 ]
