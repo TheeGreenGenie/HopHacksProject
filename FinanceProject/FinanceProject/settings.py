@@ -55,10 +55,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'FinanceProject.urls'
 
+import os
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'signup/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

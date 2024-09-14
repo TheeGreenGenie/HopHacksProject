@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'welcome.css' %}">
+</head>
+<body>
+    <div class="top">
+        <ul class="menu">
+            <li><a href="/home">Home</a></li>
+            <li class="dropdown">
+                <a href="/portfolio">Portfolio</a>
+                <ul class="dd-content">
+                    <li><a href="/sell">Sell</a></li>
+                    <li><a href="/buy">Buy</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="/transactions">Transactions</a>
+                <ul class="dd-content">
+                    <li><a href="/reccomendations">Reccomendations</a></li>
+                    <li><a href="/profit">Profit</a></li>
+                </ul>
+            </li>
+        </ul>
+    <a href="/settings"><button>Settings</button></a>
+    <div class="profile-image"></div>
+    </div>
+    <h2 class="welcome">Welcome Username</h2>
+    <div class="goals">
+        <h3>Here are some goals you set</h6>
+        <ul>
+            <li><div><h2>Goal 1</h2><h2>Associated Image</h2></div></li>
+            <li><div><h2>Goal 2</h2><h2>Associated Image</h2></div></li>
+            <li><div><h2>Goal 3</h2><h2>Associated Image</h2></div></li>
+        </ul>
+    </div>
+    <div class="stocks">
+        <h3>Top Stocks</h3>
+        <ul>
+            <li><div><h2>Stock 1</h2><h2>Associated Image</h2></div></li>
+            <li><div><h2>Stock 2</h2><h2>Associated Image</h2></div></li>
+            <li><div><h2>Stock 3</h2><h2>Associated Image</h2></div></li>
+        </ul>
+        <ul>
+            <li><div><h2>Stock 4</h2><h2>Associated Image</h2></div></li>
+            <li><div><h2>Stock 5</h2><h2>Associated Image</h2></div></li>
+            <li><div><h2>Stock 6</h2><h2>Associated Image</h2></div></li>
+        </ul>
+    </div>
+</body>
+</html>

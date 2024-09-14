@@ -3,28 +3,28 @@ from django.http import HttpResponse
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('Welcome')
+    return render(request, 'welcome.html')
 
 def home(request):
-    return HttpResponse('Home Page')
+    return render(request, 'home.html')
 
 def portfolio(request):
-    return HttpResponse("Portfolio Page")
+    return render(request, 'portfolio.html')
 
 def buy(request):
-    return HttpResponse("Buy Stocks")
+    return render(request, 'buy.html')
 
 def reccomendations(request):
-    return HttpResponse("Stock reccommendations")
+    return render(request, 'reccomendations.html')
 
 def sell(request):
-    return HttpResponse("Sell Stocks")
+    return render(request, 'sell.html')
 
 def transactions(request):
-    return HttpResponse("Trasnsaction History")
+    return render(request, 'transactions.html')
 
 def profit(request):
-    return HttpResponse("Losses and Gains")
+    return render(request, 'profit.html')
 
 def settings(request):
-    return HttpResponse("Settings page")
+    return render(request, 'settings.html')
