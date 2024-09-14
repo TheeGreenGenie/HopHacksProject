@@ -5,11 +5,8 @@ from .forms import RegisterForm
 
 
 # Create your views here.
-def signup(request):
-    return HttpResponse("Create an account")
-
 def questionaire(request):
-    return HttpResponse("An assorted array of questions")
+    return render(request, 'questionaire.html')
 
 def register(request):
     if request.method == 'POST':

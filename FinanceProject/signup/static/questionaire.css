@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: stretch;
+    column-gap: 100px;
+}
+
+h1, div{
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    margin: 5% 15%;
+    padding: 10px;
+    background-color: black;
+    color: rgb(25, 185, 25);
+    border-radius: 10px;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    margin: 0 15%;
+}
+
+.income, .risk{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.inc div {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}

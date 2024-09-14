@@ -22,7 +22,6 @@ from signup import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("signup/", signviews.signup),
     path("welcome/", mainviews.welcome),
     path("portfolio/", mainviews.portfolio),
     path("buy/", mainviews.buy),
@@ -33,6 +32,7 @@ urlpatterns = [
     path("settings/", mainviews.settings),
     path("home/", mainviews.home),
     path("profile/", mainviews.profile),
-    path('register/', auth_views.register),
-    path('', include('django.contrib.auth.urls'))
+    path('', auth_views.register),
+    path('intake/', signviews.questionaire),
+    path('', include('django.contrib.auth.urls')),
 ]
