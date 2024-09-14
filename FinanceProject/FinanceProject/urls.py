@@ -21,7 +21,8 @@ from signup import views as signviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("signup/", signviews.index),
+    path("signup/", signviews.signup),
+    path("startup/", signviews.questionaire),
     path("welcome/", mainviews.welcome),
     path("home/", mainviews.home),
     path("portfolio/", mainviews.portfolio),
