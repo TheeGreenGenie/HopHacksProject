@@ -1,2 +1,5 @@
-This is our readme file.
-My name is Jamoya
+pip install Pandas 
+pip install Django 
+pip install yfinance 
+pip install nunpy 
+pip install scikilearn 
