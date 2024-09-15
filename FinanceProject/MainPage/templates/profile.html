@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
 </head>
 <body>
-    <a href="/home"><img src="threelines.png"></a>
-    <div class="profile-image"></div>
-    <div class="name">
-        <h1>Name</h1>
-        <h1>Placeholder</h1>
-    </div>
-    <div class="email">
-        <h1>Email</h1>
-        <h1>Placeholder</h1>
-    </div>
-    <div class="phone">
-        <h1>Phone Number</h1>
-        <h1>Placeholder</h1>
-    </div>
-    <div class="stocks">
-        <h1>Stocks Owned</h1>
-        <h1>Placeholder</h1>
+    <a href="/home" class="home"><button>Home</button></a>
+    <div class="content">
+        <div class="profile-image"></div>
+        <div class="name">
+            <h1>Name</h1>
+            <h1>Placeholder</h1>
+        </div>
+        <div class="email">
+            <h1>Email</h1>
+            <h1>Placeholder</h1>
+        </div>
+        <div class="phone">
+            <h1>Phone Number</h1>
+            <h1>Placeholder</h1>
+        </div>
+        <div class="stocks">
+            <h1>Stocks Owned</h1>
+            <h1>Placeholder</h1>
+        </div>
     </div>
 </body>
 </html>
