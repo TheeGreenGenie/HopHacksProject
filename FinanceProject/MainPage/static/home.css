@@ -1,3 +1,7 @@
+body {
+    background-color: gray;
+}
+
 li {
     list-style-type: none;
 }

@@ -1,3 +1,7 @@
+body {
+    background-color: gray;
+}
+
 .welcome {
     color: green;
     display: flex;
@@ -37,7 +41,6 @@ ul{
     flex-direction: row;
     justify-content: space-around;
     gap: 15px;
-    background-color: black;
     margin: 0 5%;
     margin-top: 3%;
     padding: 10px;
@@ -118,3 +121,8 @@ h3 {
     justify-content: center;
 }
 
+#menu{
+    background-color: black;
+    padding: 15px;
+    font-size: 35px;
+}
