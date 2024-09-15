@@ -32,6 +32,8 @@ li {
     background-color: black;
     margin: 0 5%;
     margin-top: 3%;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .profile-image {

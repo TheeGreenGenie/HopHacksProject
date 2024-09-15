@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: lightgray;
+}
+
+h1 {
+    background-color: black;
+    color: rgb(25, 185, 25);
+    margin: 3% 15%;
+    font-size: 55px;
+    border-radius: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 3% 15%;
+}
+
+li {
+    list-style: none;
+}
+
+button, p, ul, div, span {
+    background-color: black;
+    color: rgb(25, 185, 25);
+    font-size: 25px;
+    margin: 25px;
+    border-radius: 15px;
+}
+
+input {
+    background-color: grey;
+}

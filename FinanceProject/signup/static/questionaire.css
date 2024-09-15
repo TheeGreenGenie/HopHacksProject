@@ -4,11 +4,13 @@ body {
     justify-content: center;
     align-content: stretch;
     column-gap: 100px;
+    background: lightgrey;
 }
 
 h1, div{
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 h1 {
@@ -16,19 +18,23 @@ h1 {
     padding: 10px;
     background-color: black;
     color: rgb(25, 185, 25);
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 input {
     display: flex;
     justify-content: center;
     margin: 0 15%;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 20px;
 }
 
 .income, .risk{
     display: flex;
     flex-direction: row;
     gap: 25px;
+    font-size: 25px;
 }
 
 .inc div {
