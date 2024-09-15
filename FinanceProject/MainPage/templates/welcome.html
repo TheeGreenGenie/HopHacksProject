@@ -11,22 +11,10 @@
     <div class="top">
         <ul id="menu">
             <li><a href="/home">Home</a></li>
-            <li class="dropdown">
-                <a href="/portfolio">Portfolio</a>
-                <ul class="dd-content">
-                    <li><a href="/sell">Sell</a></li>
-                    <li><a href="/buy">Buy</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="/transactions">Transactions</a>
-                <ul class="dd-content">
-                    <li><a href="/reccomendations">Reccomendations</a></li>
-                    <li><a href="/profit">Profit</a></li>
-                </ul>
-            </li>
+            <li><a href="/performers">Top Performers</a></li>
+            <li><a href="/welcome">Welcome</a></li>
+            <li><a href="/stock_analysis">Stock Analysis</a></li>
         </ul>
-    <a href="/settings"><button>Settings</button></a>
     <a href="/profile"><div class="profile-image"></div></a>
     </div>
     <h2 class="welcome">Welcome {{ user_data.name }}</h2>
@@ -38,14 +26,12 @@
             <li><div><h2>{{ user_data.goal3 }}</h2><h2><img style="width: 150px; height: 150px;" src="{% static 'Untitled1.png' %}"></h2></div></li>
         </ul>
     </div>
-    <div class="stocks">
+    <h3>Top Stocks</h3>
 
-        <h3>Top Stocks</h3>
-        <ul>
+    <div class="stocks">
         {% for chart in charts %}
-            <li><div><h2>Stock</h2><img style="width: 250; height: 175;" src="data:image/png;base64,{{ chart }}" alt="Chart {{ forloop.counter }}"></div></li>
+            <div class="images"><h2>Stock</h2><img src="data:image/png;base64,{{ chart }}" alt="Chart {{ forloop.counter }}"></div>
         {% endfor %}
-        </ul>
     </div>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'stock_analysis.css' %}">
+</head>
+<body>
+    <div class="top">
+        <ul id="menu">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/performers">Top Performers</a></li>
+            <li><a href="/welcome">Welcome</a></li>
+            <li><a href="/stock_analysis">Stock Analysis</a></li>
+        </ul>
+    <a href="/profile"><div class="profile-image"></div></a>
+</div>
+<div class="centered">
+    <h1>Stock Analysis: Apple vs Nvidia</h1>
+    <h2>Stock Prices and Moving Averages</h2>
+    <img src="data:image/png;base64,{{ graph1 }}" alt="Stock Prices and Moving Averages">
+
+    <h2>Relative Strength Index (RSI)</h2>
+    <img src="data:image/png;base64,{{ graph2 }}" alt="RSI">
+
+    <h2>Volume Comparison</h2>
+    <img src="data:image/png;base64,{{ graph3 }}" alt="Volume Comparison">
+</div>
+</body>
+</html>

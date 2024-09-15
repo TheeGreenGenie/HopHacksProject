@@ -127,7 +127,9 @@ h3 {
     font-size: 35px;
 }
 
-img {
-    height: 100px;
-    width: 150px;
+.images {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }

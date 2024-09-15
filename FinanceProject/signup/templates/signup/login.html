@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'login.css' %}"
+    <link rel="stylesheet" href="{% static 'login.css' %}">
 </head>
 <body>
     <h2>Login</h2>
@@ -14,6 +14,8 @@
         {{ form.as_p }}
         <button type="submit">Login</button>
     </form>
+
+    <a href="/"><button>Not a member yet? sign up!</button></a>
 
     {% if messages %}
       <ul>

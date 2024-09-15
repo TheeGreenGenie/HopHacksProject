@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
+from MainPage import moving_graphs, volume, model_code, more_yfinance, Rsi
 from signup.models import UserData
-from MainPage.model_code import charts
+import base64
+import io
+
 
 # Create your views here.
 def welcome(request):
@@ -10,14 +12,15 @@ def welcome(request):
 def home(request):
     return render(request, 'home.html')
 
-def portfolio(request):
-    return render(request, 'portfolio.html')
+def performers(request):
+
+    df_html = more_yfinance.df.to_html(classes='table table-striped')
+
+    return render(request, 'performers.html', {'df_html': df_html})
 
 def buy(request):
     return render(request, 'buy.html')
 
-def reccomendations(request):
-    return render(request, 'reccomendations.html')
 
 def sell(request):
     return render(request, 'sell.html')
@@ -45,5 +48,9 @@ def user_data_view(request):
 
     user_data = get_object_or_404(UserData, username=current_username)
 
-    return render(request, 'welcome.html', {'user_data': user_data, 'charts': charts})
+    return render(request, 'welcome.html', {'user_data': user_data, 'charts': model_code.charts})
 
+
+def stock_analysis(request):
+
+    return render(request, 'stock_analysis.html', {'graph1': moving_graphs.graph1, 'graph2': volume.graph2, 'graph3': Rsi.graph3})

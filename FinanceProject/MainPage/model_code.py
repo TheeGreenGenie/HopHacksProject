@@ -15,8 +15,8 @@ ticker = ['AAPL', 'GOOGL', 'MSFT']
 
 charts = []
 
-for i in ticker:
-    stock_data = yf.download(i, start='2019-01-01', end='2024-01-01')
+for company_names in ticker:
+    stock_data = yf.download(company_names, start='2019-01-01', end='2024-01-01')
 
     # Use only the closing price 
     df = stock_data[['Close']].copy()  # Use the 'Close' column only
@@ -59,7 +59,7 @@ for i in ticker:
     # Predicted plot
     plt.plot(df.index[-len(y_test):], y_pred, label='Predicted Price', color='red')
 
-    plt.title(f'({i}) Actual vs Predicted Closing Prices')
+    plt.title(f'({company_names}) Actual vs Predicted Closing Prices')
     plt.xlabel('Date')
     plt.ylabel('Price')
     plt.legend()

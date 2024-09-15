@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'performers.css' %}">
+</head>
+<body>
+    <div class="top">
+        <ul id="menu">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/performers">Top Performers</a></li>
+            <li><a href="/welcome">Welcome</a></li>
+            <li><a href="/stock_analysis">Stock Analysis</a></li>
+        </ul>
+    <a href="/profile"><div class="profile-image"></div></a>
+    </div>
+    <div class="tableholder">
+        <h1>Top Market Performers</h1>
+        {{ df_html|safe }}
+    </div>
+</body>
+</html>
