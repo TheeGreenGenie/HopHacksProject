@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from signup.models import UserData
+from MainPage.model_code import charts
 
 # Create your views here.
 def welcome(request):
@@ -30,4 +32,18 @@ def settings(request):
     return render(request, 'settings.html')
 
 def profile(request):
-    return render(request, 'profile.html')
+
+    current_username = request.user.username
+
+    user_data = get_object_or_404(UserData, username=current_username)
+
+    return render(request, 'profile.html', {'user_data': user_data})
+
+def user_data_view(request):
+
+    current_username = request.user.username
+
+    user_data = get_object_or_404(UserData, username=current_username)
+
+    return render(request, 'welcome.html', {'user_data': user_data, 'charts': charts})
+

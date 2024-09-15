@@ -12,21 +12,24 @@
     <div class="content">
         <div class="profile-image"></div>
         <div class="name">
-            <h1>Name</h1>
-            <h1>Placeholder</h1>
+            <h1>Name:</h1>
+            <h1>{{ user_data.name }}</h1>
         </div>
         <div class="email">
-            <h1>Email</h1>
-            <h1>Placeholder</h1>
+            <h1>Email:</h1>
+            <h1>{{ user_data.email }}</h1>
         </div>
         <div class="phone">
-            <h1>Phone Number</h1>
-            <h1>Placeholder</h1>
+            <h1>Phone Number:</h1>
+            <h1>{{ user_data.phone_number }}</h1>
         </div>
         <div class="stocks">
-            <h1>Stocks Owned</h1>
-            <h1>Placeholder</h1>
+            <h1>Stocks Owned:</h1>
+            <h1> 0 </h1>
         </div>
+    </div>
+    <div style="display: flex; justify-content: center;">
+    <img style="height:150px; width:150px;" src="{% static 'Logo maker project-2.png' %}">
     </div>
 </body>
 </html>

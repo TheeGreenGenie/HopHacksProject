@@ -29,26 +29,22 @@
     <a href="/settings"><button>Settings</button></a>
     <a href="/profile"><div class="profile-image"></div></a>
     </div>
-    <h2 class="welcome">Welcome Username</h2>
+    <h2 class="welcome">Welcome {{ user_data.name }}</h2>
     <div class="goals">
         <h3>Here are some goals you set</h6>
         <ul>
-            <li><div><h2>Goal 1</h2><h2>Associated Image</h2></div></li>
-            <li><div><h2>Goal 2</h2><h2>Associated Image</h2></div></li>
-            <li><div><h2>Goal 3</h2><h2>Associated Image</h2></div></li>
+            <li><div><h2>{{ user_data.goal1 }}</h2><img style="width: 150px; height: 150px;" src="{% static 'pngtree-never-give-up-motivation-poster-concept-black-and-white-illustration-png-image_2154318.jpg' %}"></div></li>
+            <li><div><h2>{{ user_data.goal2 }}</h2><h2><img style="width: 150px; height: 150px;" src="{% static 'Untitled.png' %}"></h2></div></li>
+            <li><div><h2>{{ user_data.goal3 }}</h2><h2><img style="width: 150px; height: 150px;" src="{% static 'Untitled1.png' %}"></h2></div></li>
         </ul>
     </div>
     <div class="stocks">
+
         <h3>Top Stocks</h3>
         <ul>
-            <li><div><h2>Stock 1</h2><h2>Associated Image</h2></div></li>
-            <li><div><h2>Stock 2</h2><h2>Associated Image</h2></div></li>
-            <li><div><h2>Stock 3</h2><h2>Associated Image</h2></div></li>
-        </ul>
-        <ul>
-            <li><div><h2>Stock 4</h2><h2>Associated Image</h2></div></li>
-            <li><div><h2>Stock 5</h2><h2>Associated Image</h2></div></li>
-            <li><div><h2>Stock 6</h2><h2>Associated Image</h2></div></li>
+        {% for chart in charts %}
+            <li><div><h2>Stock</h2><img style="width: 250; height: 175;" src="data:image/png;base64,{{ chart }}" alt="Chart {{ forloop.counter }}"></div></li>
+        {% endfor %}
         </ul>
     </div>
 </body>

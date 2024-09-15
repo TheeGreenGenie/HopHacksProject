@@ -3,47 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Queistionaire</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'questionaire.css' %}">
 </head>
 <body>
-    <h1>What's your name?</h1>
-    <input placeholder="Enter your name">
-    <h1>What's your age?</h1>
-    <input placeholder="Enter your age">
-    <h1>What is your income range</h1>
-    <div class="income">
-        <div class="inc">
-        <label for="low-income">Low Income</label>
-        <input type="radio" id="lowinc" name="income" value="lowinc">
-        </div>
-        <div class="inc">
-        <label for="medium-income">Medium Income</label>
-        <input type="radio" id="medinc" name="income" value="medinc">
-        </div>
-        <div class="inc">
-        <label for="high-income">High Income</label>
-        <input type="radio" id="hiinc" name="income" value="hiinc">
-        </div>
-    </div>
-    <h1>What is the risk level you are comfortable taking?</h1>
-    <div class="risk">
-        <div class="rk">
-        <label for="low-risk">Low</label>
-        <input type="radio" id="lo" name="risk" value="lo">
-        </div>
-        <div class="rk">
-        <label for="medium-risk">Medium</label>
-        <input type="radio" id="med" name="risk" value="med">
-        </div>
-        <div class="rk">
-        <label for="high-risk">High</label>
-        <input type="radio" id="hi" name="risk" value="hi">
-        </div>
-    </div>
-    <h1>How much disposable income do you have (Monthly)</h1>
-    <input placeholder="$ Input the amount Here">
-    <a href="/welcome"><button class="sub">Submit</button></a>
+    <h1>Fill out The Queistionaire</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>

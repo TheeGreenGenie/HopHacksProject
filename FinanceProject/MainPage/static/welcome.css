@@ -126,3 +126,8 @@ h3 {
     padding: 15px;
     font-size: 35px;
 }
+
+img {
+    height: 100px;
+    width: 150px;
+}
